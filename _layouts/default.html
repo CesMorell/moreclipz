@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ site.description }}">
+<style>
+  :root { --bg:#fff; --fg:#1a1a1a; --muted:#5f6368; --line:#e6e6e6; --accent:#e5354f; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#111214; --fg:#ececec; --muted:#a0a4ab; --line:#26282c; --accent:#ff5c74; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  header, main, footer { max-width: 720px; margin: 0 auto; padding: 0 16px; }
+  header { display:flex; justify-content:space-between; align-items:center; padding-top:24px; padding-bottom:16px; border-bottom:1px solid var(--line); }
+  header a.brand { font-weight:700; color:var(--fg); text-decoration:none; }
+  nav a { color:var(--muted); text-decoration:none; margin-left:16px; font-size:14px; }
+  nav a:hover, a { color:var(--accent); }
+  main { padding-top:24px; padding-bottom:48px; }
+  h1 { font-size:28px; line-height:1.25; margin:0 0 8px; }
+  em { color:var(--muted); }
+  footer { color:var(--muted); font-size:13px; padding-bottom:32px; border-top:1px solid var(--line); padding-top:16px; }
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  <nav><a href="{{ '/terms.html' | relative_url }}">Terms</a><a href="{{ '/privacy.html' | relative_url }}">Privacy</a></nav>
+</header>
+<main>
+{{ content }}
+</main>
+<footer>MoreClipz Clipper is a personal tool used by the operator of MoreClipzTV.</footer>
+</body>
+</html>

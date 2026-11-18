@@ -1,0 +1,4 @@
+title: MoreClipz Clipper
+description: Turns livestream highlights into short vertical clips and posts them to the MoreClipzTV accounts.
+markdown: kramdown
+exclude: [terms.src.md, privacy.src.md, README.md]
